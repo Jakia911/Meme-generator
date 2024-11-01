@@ -1,7 +1,10 @@
 "use client";
 
+import EyesButton from "@/components/EyesButton";
+import FacesButton from "@/components/FacesButton";
+import GlassesButton from "@/components/GlassesButton";
 import HatsButton from "@/components/HatsButton";
-import { eyes, mouths } from "@/data/Placeholder";
+import MouthsButton from "@/components/MouthsButton";
 import { useRef, useState } from "react";
 s; // CSS module for styling
 export default function Home() {
@@ -103,31 +106,10 @@ export default function Home() {
 
       <div>
         <HatsButton />
-      </div>
-
-      <div>
-        <h3>Mouths</h3>
-        {mouths.map((mouth, index) => (
-          <img
-            key={index}
-            src={mouth.img}
-            alt="Mouth"
-            onClick={() => setSelectedMouth(mouth.img)}
-            className={styles.thumbnail}
-          />
-        ))}
-      </div>
-      <div>
-        <h3>Eyes</h3>
-        {eyes.map((eye, index) => (
-          <img
-            key={index}
-            src={eye.img}
-            alt="Eyes"
-            onClick={() => setSelectedEyes(eye.img)}
-            className={styles.thumbnail}
-          />
-        ))}
+        <MouthsButton />
+        <EyesButton />
+        <FacesButton />
+        <GlassesButton />
       </div>
     </div>
   );

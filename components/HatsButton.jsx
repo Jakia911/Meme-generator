@@ -1,5 +1,4 @@
 import { hats } from "@/data/Placeholder";
-import styles from "../MemeGenerator.module.css";
 
 const HatsButton = () => {
   return (
@@ -14,7 +13,7 @@ const HatsButton = () => {
             src={hat.img}
             alt="Hat"
             onClick={() => setSelectedHat(hat.img)}
-            className={styles.thumbnail}
+            className="hatImg"
           />
         ))}
       </div>
