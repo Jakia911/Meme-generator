@@ -1,8 +1,9 @@
 "use client";
 
-import { eyes, hats, mouths } from "@/data/Placeholder";
+import HatsButton from "@/components/HatsButton";
+import { eyes, mouths } from "@/data/Placeholder";
 import { useRef, useState } from "react";
-import styles from "./MemeGenerator.module.css"; // CSS module for styling
+s; // CSS module for styling
 export default function Home() {
   const canvasRef = useRef(null);
   const [topText, setTopText] = useState("");
@@ -99,18 +100,11 @@ export default function Home() {
       /> */}
 
       {/* Accessory Selection */}
+
       <div>
-        <h3>Hats</h3>
-        {hats.map((hat, index) => (
-          <img
-            key={index}
-            src={hat.img}
-            alt="Hat"
-            onClick={() => setSelectedHat(hat.img)}
-            className={styles.thumbnail}
-          />
-        ))}
+        <HatsButton />
       </div>
+
       <div>
         <h3>Mouths</h3>
         {mouths.map((mouth, index) => (
