@@ -1,0 +1,32 @@
+/* Meme style */
+
+.canvasContainer {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+.baseImage {
+  display: block;
+  max-width: 100%;
+}
+
+.accessory {
+  position: absolute;
+  width: 50px; /* Set default size */
+  cursor: move;
+}
+
+.thumbnail {
+  width: 50px;
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  border-color: #333;
+}
